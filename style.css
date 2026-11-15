@@ -1,0 +1,18 @@
+*{box-sizing:border-box}
+:root{color-scheme:dark}
+html,body{margin:0;min-height:100%;background:#090714;color:#fff;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+body{min-height:100vh;overflow:hidden}
+.scene{position:relative;display:grid;place-items:center;min-height:100svh;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 50% 48%,rgba(88,48,137,.24),transparent 43%),#090714}
+.stars,.stars:before,.stars:after{position:absolute;inset:0;content:"";pointer-events:none;background-image:radial-gradient(1px 1px at 10% 20%,#fff9 50%,transparent),radial-gradient(1px 1px at 80% 30%,#d9c6ffbb 50%,transparent),radial-gradient(2px 2px at 35% 75%,#fff8 50%,transparent),radial-gradient(1px 1px at 68% 82%,#ffcbefbb 50%,transparent);background-size:270px 240px;opacity:.6;animation:twinkle 5s ease-in-out infinite alternate}
+.stars:before{transform:translate(70px,40px);opacity:.45}.stars:after{transform:translate(-50px,-30px);opacity:.35}
+#particles{position:absolute;inset:0;width:100%;height:100%}
+.message{position:absolute;top:clamp(22px,5vh,54px);width:min(92vw,620px);text-align:center;pointer-events:none;animation:fade-in 1.2s ease both}
+.eyebrow{margin:0 0 9px;color:#cdb5f3;font-size:.68rem;font-weight:700;letter-spacing:.28em}
+h1{margin:0;font-size:clamp(1.65rem,5vw,3rem);font-weight:650;letter-spacing:-.045em;text-shadow:0 0 28px #c58cff55}
+h1 span{color:#ff8dc9}.hint{margin:9px 0 0;color:#b8aecb;font-size:clamp(.8rem,2vw,1rem)}
+.controls{position:absolute;bottom:clamp(54px,9vh,85px);display:flex;gap:12px;justify-content:center;width:100%;padding:0 16px}
+button{border:1px solid #d9c3ff55;border-radius:999px;padding:12px 21px;color:#fff;background:#ffffff0d;backdrop-filter:blur(12px);font:inherit;font-size:.9rem;cursor:pointer;transition:transform .2s,background .2s}
+button:hover{transform:translateY(-2px);background:#c69bff25}#love{background:linear-gradient(110deg,#8e55c9aa,#d65e9aaa);border-color:transparent}
+.footer{position:absolute;bottom:19px;margin:0;color:#80758f;font-size:.72rem;letter-spacing:.08em}
+@keyframes twinkle{from{opacity:.25}to{opacity:.75}}@keyframes fade-in{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-height:620px){.message{top:15px}.controls{bottom:35px}.footer{display:none}}
